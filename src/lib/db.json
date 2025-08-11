@@ -1,0 +1,115 @@
+{
+  "courses": [
+    {
+      "code": "FOCS91",
+      "title": "Foundation of Computing Science",
+      "description": "too difficult subject to score good grades",
+      "credits": 4,
+      "id": "course-1752782749713-jxdfa"
+    },
+    {
+      "id": "cs101",
+      "code": "CS101",
+      "title": "Introduction to Computer Science",
+      "description": "A foundational course on computational thinking, programming, and computer systems.",
+      "credits": 3
+    },
+    {
+      "id": "math202",
+      "code": "MATH202",
+      "title": "Calculus II",
+      "description": "Topics include techniques of integration, applications of integration, sequences, and series.",
+      "credits": 4
+    },
+    {
+      "id": "phy301",
+      "code": "PHY301",
+      "title": "Modern Physics",
+      "description": "An introduction to the concepts of relativity and quantum mechanics.",
+      "credits": 3
+    },
+    {
+      "id": "eng100",
+      "code": "ENG100",
+      "title": "Creative Writing Workshop",
+      "description": "Practice in writing fiction and poetry, with an emphasis on craft and revision.",
+      "credits": 3
+    }
+  ],
+  "students": [
+    {
+      "id": "std1",
+      "studentId": "S1001",
+      "name": "Alice Johnson",
+      "email": "alice.j@example.com",
+      "program": "Computer Science"
+    },
+    {
+      "id": "std2",
+      "studentId": "S1002",
+      "name": "Bob Williams",
+      "email": "bob.w@example.com",
+      "program": "Business Administration"
+    },
+    {
+      "id": "std3",
+      "studentId": "S1003",
+      "name": "Carol Davis",
+      "email": "carol.d@example.com",
+      "program": "Mechanical Engineering"
+    },
+    {
+      "id": "std4",
+      "studentId": "S1004",
+      "name": "David Brown",
+      "email": "david.b@example.com",
+      "program": "Graphic Design"
+    },
+    {
+      "id": "std5",
+      "studentId": "S1005",
+      "name": "Eve Miller",
+      "email": "eve.m@example.com",
+      "program": "Data Science"
+    },
+    {
+      "id": "student@campuspulse.com",
+      "studentId": "S0000",
+      "name": "Demo Student",
+      "email": "student@campuspulse.com",
+      "program": "Undeclared"
+    }
+  ],
+  "enrollments": [
+    {
+      "id": "enroll-1",
+      "studentId": "student@campuspulse.com",
+      "courseId": "cs101",
+      "enrollmentDate": "2024-01-15T10:00:00Z"
+    },
+    {
+      "id": "enroll-2",
+      "studentId": "student@campuspulse.com",
+      "courseId": "math202",
+      "enrollmentDate": "2024-01-15T10:05:00Z"
+    },
+    {
+      "studentId": "student@campuspulse.com",
+      "courseId": "course-1752782749713-jxdfa",
+      "id": "enroll-1752783106833-s8wto",
+      "enrollmentDate": "2025-07-17T20:11:46.833Z"
+    },
+    {
+      "studentId": "student@campuspulse.com",
+      "courseId": "phy301",
+      "id": "enroll-1752846888522-d6ylk",
+      "enrollmentDate": "2025-07-18T13:54:48.522Z"
+    },
+    {
+      "studentId": "student@campuspulse.com",
+      "courseId": "eng100",
+      "id": "enroll-1752846891433-yx43a",
+      "enrollmentDate": "2025-07-18T13:54:51.433Z"
+    }
+  ]
+}

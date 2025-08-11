@@ -1,0 +1,11 @@
+import AppLayout from "@/components/layout/app-layout";
+import type { ReactNode } from "react";
+import { AuthProvider } from "@/context/auth-context";
+
+export default function MyCoursesLayout({ children }: { children: ReactNode }) {
+  return (
+    <AuthProvider>
+      <AppLayout>{children}</AppLayout>
+    </AuthProvider>
+  );
+}
