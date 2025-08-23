@@ -3,6 +3,7 @@ import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 import { z } from 'zod';
 import { db } from '@/lib/database';
+import { notificationService } from '@/lib/notification-service';
 
 const courseSchema = z.object({
   code: z.string().min(3, { message: 'Course code must be at least 3 characters.' }).max(10),
@@ -38,7 +39,18 @@ export async function POST(request: NextRequest) {
     }
 
     const newCourse = await db.courses.create({ code: code.toUpperCase(), title, description: description || undefined, credits });
-    
+
+    if (newCourse) {
+        try {
+            const allStudents = await db.students.getAll();
+            await notificationService.emailAllStudents(allStudents, {...newCourse, studentsEnrolled: 0});
+        } catch (notificationError) {
+            // Log the error but don't fail the API call, as the primary operation (course creation) succeeded.
+            console.error("Failed to send notifications:", notificationError);
+        }
+    }
+    // -----------------------------------------
+
     return NextResponse.json(newCourse, { status: 201 });
   } catch (error) {
     console.error('POST /api/courses error:', error);

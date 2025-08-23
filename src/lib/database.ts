@@ -4,7 +4,7 @@ import clientPromise from './mongodb';
 import { ObjectId } from 'mongodb';
 
 // Define the structure of our database entities
-interface Course {
+export interface Course {
   id: string; // This will be the string representation of MongoDB's _id
   code: string;
   title: string;
@@ -12,7 +12,7 @@ interface Course {
   credits: number;
 }
 
-interface Student {
+export interface Student {
   id: string; // String representation of _id
   studentId: string;
   name: string;
